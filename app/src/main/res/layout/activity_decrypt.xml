@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".DecryptActivity"
+    android:background="@color/colorWhite"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout2">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+
+            android:id="@+id/decrypt_editText_Data"
+            android:minHeight="50dp"
+            android:hint="Text to decrypt"
+            android:textSize="18dp"
+            android:background="@drawable/border_rrect"
+            android:singleLine="true"
+
+
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/decrypt_editText_Password"
+            android:hint="Password"
+            android:textSize="18dp"
+            android:background="@drawable/border_rrect"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:padding="5dp"
+            android:layout_marginBottom="2dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Decrypt"
+                android:id="@+id/decrypt_button"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:src="@drawable/lock_open_small"
+                android:scaleType="fitStart"
+                android:background="@drawable/button_rrect"
+                android:paddingLeft="2dp"
+                android:paddingTop="5dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Decrypt"
+                android:id="@+id/textView2"
+                android:layout_gravity="center"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/decrypt_progressBar"
+        android:layout_centerInParent="true"
+        android:indeterminate="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/decrypt_textView_Result"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:textIsSelectable="true"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal" />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
